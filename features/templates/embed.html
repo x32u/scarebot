@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>scare - embed builder</title>
+    <link rel="icon" href="{{avatar}}">
+    <meta name="og:site_name" content="scare.life">
+    <meta name="og:title" content="scare - embed builder">
+    <meta name="og:url" content="https://scare.life/embeds">
+    <meta name="og:description" content="build embeds with scare">
+    <meta name="theme-color" content="#010101">
+    <script src="/static/4jxtg.js"></script>
+    <script src="/static/embeds.js"></script>
+</head>
+<body>
+    <div class="duo">
+        <div class="crow">
+            <div class="label">
+                <h2>Content</h2>
+                <textarea class="large" id="content"></textarea>
+            </div>
+            <div class="label">
+                <h2>Title</h2>
+                <textarea class="short" id="title"></textarea>
+            </div>
+            <div class="label">
+                <h2>Description</h2>
+                <textarea class="large" id="description"></textarea>
+            </div>
+            <div class="label">
+                <h2>Color</h2>
+                <input type="color" id="color">
+            </div>
+            <div class="label">
+                <h2>Thumbnail</h2>
+                <textarea class="short" id="thumbnail"></textarea>
+            </div>
+            <div class="label">
+                <h2>Image</h2>
+                <textarea class="short" id="image"></textarea>
+            </div>
+        </div>
+        <div class="result">
+            <ul class="buttons">
+                <li><button onclick="generate()">Generate</button></li>
+                <li><button onclick="copytext()">Copy</button></li>
+            </ul>
+            <div id="output"></div>
+        </div>
+    </div>
+</body>

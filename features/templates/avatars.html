@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{{display_name}}'s avatars</title>
+        <link rel="icon" href="{{avatars[0]}}">
+        <meta name="og:title" content="Avatar History">
+        <meta name="og:site_name" content="scare.life">
+        <meta name="og:url" content="https://scare.life/avatars/{{id}}">
+        <meta name="og:description" content="view {{display_name}}'s avatars">
+        <meta name="og:image" content="{{avatars[0]}}">
+        <meta name="theme-color" content="#010101">
+        <script src="/static/avatars.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>scare.life</h1>
+            <h3>avatars</h3>
+        </header>
+        <div>
+            {% for avatar in avatars %}
+                <a href="{{avatar}}"><img src="{{avatar}}"></a>
+            {% endfor %}
+        </div>
+    </body>
+</html>

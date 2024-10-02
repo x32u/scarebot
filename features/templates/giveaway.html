@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>scare giveaways</title>
+        <link rel="icon" href="{{avatar}}">
+        <meta name="og:site_name" content="scare.life">
+        <meta name="og:image" content="{{avatar}}">
+        <meta name="og:title" content="scare - giveaways">
+        <meta name="og:url" content="https://scare.life/giveaway">
+        <meta name="og:description" content="View the giveaways in {{guild}}">
+        <meta name="og:image" content="https://scare.life/static/giveaway.png">
+        <meta name="theme-color" content="#010101">
+        <script src="/static/3ghs.js"></script>
+        <script src="/static/pure-snow.js" defer=""></script>
+        <script src="/static/giveaway.js" defer=""></script>
+    </head>
+    <body>
+        <div id="snow" data-count="40"></div>
+        <header>
+            <h1>scare.life</h1>
+            <h3>giveaways</h3>
+        </header>
+        <section>
+            {% for giveaway in giveaways %}
+                <div class="gwCard">
+                    <div class="gwImage">
+                        <img src="/static/giveaway.png">
+                    </div>
+                    <div class="gwDetails">
+                        <h1>{{giveaway['title']}}</h1>
+                        <p>Winners: <span>{{giveaway['winners']}}</span></p>
+                        <p>Entries: <span>{{giveaway['entries']}}</span></p>
+                        <p id="countdown-{{giveaway['number']}}" date="{{giveaway['date']}}"></p>
+                    </div>
+                </div>
+            {% endfor %}
+        </section>
+    </body>
+</html>

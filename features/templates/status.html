@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>scare - status</title>
+        <link rel="icon" href="{{icon}}">
+        <meta name="og:site_name" content="scare.life">
+        <meta name="og:image" content="{{icon}}">
+        <meta name="og:title" content="scare - status">
+        <meta name="og:description" content="check scare bot's status">
+        <meta name="theme-color" content="#010101">
+        <script src="/static/status.js"></script>
+        <script src="/static/pure-snow.js"></script>
+    </head>
+    <body>
+        <div id="snow" data-count="10"></div>
+        <header>
+            <h1>scare.life</h1>
+            <h3>status</h3>
+        </header>
+        <section>
+            <div class="container">
+                <div class="title">
+                    <div class="circle" style="{{color}}"></div>
+                    <h1>{{status}}</h1>
+                </div>
+                <span></span>
+                <div class="info">
+                    <div class="card">
+                        <h3>Latency</h3>
+                        <p>{{latency}}</p>
+                    </div> 
+                    <div class="card">
+                        <h3>Uptime</h3>
+                        <p>{{uptime}}</p>
+                    </div> 
+                    <div class="card">
+                        <h3>Servers</h3>
+                        <p>{{servers}}</p>
+                    </div>
+                    <div class="card">
+                        <h3>Users</h3>
+                        <p>{{users}}</p>
+                    </div>  
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

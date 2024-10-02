@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>scare - {{code}}</title>
+        <meta name="theme-color" content="#010101">
+    </head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        :root {
+            --error: rgb(138, 141, 141);
+            --barrier: rgb(43, 42, 42);
+            --message: rgb(63, 65, 65);
+        }
+
+        body {
+            background-color: #010101;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: inline;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            height: 90vh;
+            gap: 30px;
+
+            h1 {
+                margin: 0;
+                font-family: 'Poppins', sans-serif;
+                font-style: bold;
+                font-size: 100px;
+                color: var(--error);
+            }
+            
+            div {
+                height: 160px;
+                width: 15px;
+                border-radius: 20px;
+                background-color: var(--barrier);
+            }
+            
+            h2 {
+                font-size: 40px;
+                font-family: 'Poppins', sans-serif;
+                color: var(--message);
+            }
+        }
+
+        @media screen and (max-width: 747px) {
+            .container {
+                flex-direction: column;
+
+                div {
+                    height: 15px;
+                    width: 160px;
+                }
+
+                h2 {
+                    font-size: 30px;
+                }
+            } 
+        }
+    </style>
+    <body>
+        <div class="container">
+            <h1>{{code}}</h1>
+            <div></div>
+            <h2>{{message}}</h2>
+        </div>
+    </body>
+</html>
